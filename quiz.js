@@ -5,11 +5,10 @@ function checkAnswer() {
 
     if (userAnswer === correctAnswer) {
         feedback.textContent="Correct! Well done.";
-    }else {
+    }
+    if(userAnswer != correctAnswer) {
         feedback.textContent="Thats incorrect. Try again!";
     }
 }
 
-const submitAnswer = document.getElementById('submit-answer');
-
-submitAnswer.addEventListener('click',checkAnswer);
+document.getElementById('submit-button').addEventListener('click' , checkAnswer);
